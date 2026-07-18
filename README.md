@@ -52,6 +52,7 @@ The application is structured around a Job-First Optimization Workflow:
 ├── README.md               # Architecture documentation manual
 ├── tailwind.config.js      # Custom utility class layout configurations
 └── vite.config.js          # Development server engine bundler configuration
+```
 
 ## Setup & Port Ingestion Pipelines
 
