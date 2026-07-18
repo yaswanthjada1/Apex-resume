@@ -1,0 +1,43 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+@layer utilities {
+  /* Adds a subtle entrance animation for page transitions. */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media print {
+  /* Removes browser chrome and keeps the print layout clean. */
+  body, #root {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Makes the preview content stack naturally in print mode. */
+  .grid {
+    display: block !important;
+  }
+  
+  /* Removes default browser headers and footers from printed pages. */
+  @page {
+    margin: 15mm 15mm 15mm 15mm;
+    size: auto;
+  }
+}
