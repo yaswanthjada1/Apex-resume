@@ -30,24 +30,28 @@ The application is structured around a Job-First Optimization Workflow:
 ├── public/                 # Static web assets
 │   └── favicon.ico
 ├── src/
-│   ├── components/
+│   ├── assets/             # Vector graphic assets and imagery
+│   │   └── logo.svg
+│   ├── components/         # Reusable UI component blocks
 │   │   ├── Footer.jsx      # Dynamic connection monitoring block
-│   │   ├── Navbar.jsx      # Navigation shell
-│   │   └── ModelSelector.jsx
-│   ├── pages/
-│   │   ├── AtsChecker.jsx  # ATS compliance workspace
-│   │   ├── LandingPage.jsx
-│   │   └── ResumeBuilder.jsx
-│   ├── hooks/
-│   │   └── useOllama.js    # Local Ollama request handler
-│   ├── data/
-│   │   ├── industryKeywords.json
-│   │   └── resumeTemplates.json
-│   ├── index.css           # Contains targeted @media print rules
-│   └── main.jsx
-├── utils/                  # Clean data formatting extensions
-└── package.json
-```
+│   │   ├── ModelSelector.jsx # Local AI model orchestration menu
+│   │   └── Navbar.jsx      # Navigation header shell
+│   ├── hooks/              # Custom application lifecycle hooks
+│   │   └── useOllama.js    # Local Ollama connection & request abstraction
+│   ├── pages/              # Main application screen views
+│   │   ├── AtsChecker.jsx  # Compliance analyzer & keyword scanner workspace
+│   │   ├── LandingPage.jsx # Product landing interface entry point
+│   │   └── ResumeBuilder.jsx # Job-First optimization builder workspace
+│   ├── App.jsx             # Core view layout router and root element
+│   ├── index.css           # Global stylesheet containing targeted @media print rules
+│   └── main.jsx            # DOM compiler initialization layer
+├── index.html              # Main application HTML page template shell
+├── LICENSE                 # Legal open-source distribution definitions
+├── package.json            # Application dependencies and environment scripts
+├── postcss.config.js       # Global style compilation parameters
+├── README.md               # Architecture documentation manual
+├── tailwind.config.js      # Custom utility class layout configurations
+└── vite.config.js          # Development server engine bundler configuration
 
 ## Setup & Port Ingestion Pipelines
 
